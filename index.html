@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-left">
+            <span class="material-icons menu-icon">menu</span>
+            <div class="logo-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg" alt="YouTube Logo" class="youtube-logo">
+                <h1 class="logo-text">YouTube</h1>
+            </div>
+        </div>
+        <div class="header-middle">
+            <input type="text" class="search-bar" placeholder="Search">
+            <button class="search-button">
+                <span class="material-icons">search</span>
+            </button>
+        </div>
+        <div class="header-right">
+            <span class="material-icons">videocam</span>
+            <span class="material-icons">apps</span>
+            <span class="material-icons">notifications</span>
+            <img src="https://i.pravatar.cc/30?img=12" alt="User Avatar" class="user-avatar">
+        </div>
+    </header>
+
+    <div class="main-content">
+        <aside class="sidebar">
+            <a href="#" class="sidebar-item active">
+                <span class="material-icons">home</span>
+                <span>Home</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <span class="material-icons">explore</span>
+                <span>Explore</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <span class="material-icons">subscriptions</span>
+                <span>Subscriptions</span>
+            </a>
+            <hr>
+            <a href="#" class="sidebar-item">
+                <span class="material-icons">video_library</span>
+                <span>Library</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <span class="material-icons">history</span>
+                <span>History</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <span class="material-icons">ondemand_video</span>
+                <span>Your videos</span>
+            </a>
+        </aside>
+
+        <div class="main-video-section">
+            <div class="video-card larger-video-card ad-card">
+                <div class="ad-image-container">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTMzNXwwfDF8c2VhcmNofDN8fGNvZGluZ3xlbnwwfHx8fDE3MDI2MTQ4NDV8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Video Thumbnail" class="video-thumbnail">
+                    <div class="ad-overlay">
+                        <div class="ad-info-text">Ad 1 of 3 • 0:05</div>
+                        <button class="skip-ad-button">Skip Ad</button>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <img src="https://i.pravatar.cc/30?img=1" alt="Channel Avatar" class="channel-avatar">
+                    <div class="video-details">
+                        <h3 class="video-title">The Best Ways to Learn a New Skill in Tech</h3>
+                        <p class="channel-name">Dev Journey</p>
+                        <p class="video-stats">1.2M views • 2 weeks ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comments-section">
+                <h3 class="comments-count">1,234 Comments</h3>
+                <div class="comment-input-container">
+                    <img src="https://i.pravatar.cc/30?img=13" alt="Your Avatar" class="user-avatar-small">
+                    <input type="text" placeholder="Add a public comment..." class="comment-input">
+                </div>
+                <div class="comment-list">
+                    <div class="comment-item">
+                        <img src="https://i.pravatar.cc/30?img=5" alt="User Avatar" class="user-avatar-small">
+                        <div class="comment-details">
+                            <p class="comment-user">Alice92 <span class="comment-date">3 days ago</span></p>
+                            <p class="comment-text">This video was incredibly helpful! The breakdown of new technologies was exactly what I needed. Thanks for sharing!</p>
+                        </div>
+                    </div>
+                    <div class="comment-item">
+                        <img src="https://i.pravatar.cc/30?img=6" alt="User Avatar" class="user-avatar-small">
+                        <div class="comment-details">
+                            <p class="comment-user">CodeGuru <span class="comment-date">2 days ago</span></p>
+                            <p class="comment-text">Great content! I've been following this channel for a while and the quality is always top-notch. Can't wait for the next one.</p>
+                        </div>
+                    </div>
+                    <div class="comment-item">
+                        <img src="https://i.pravatar.cc/30?img=7" alt="User Avatar" class="user-avatar-small">
+                        <div class="comment-details">
+                            <p class="comment-user">TechFan2023 <span class="comment-date">1 day ago</span></p>
+                            <p class="comment-text">I'm a complete beginner and found this super easy to follow. You made complex topics simple. Subscribed!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-grid">
+            <div class="video-card ad-card larger-video-card">
+                <div class="ad-image-container">
+                    <img src="https://images.unsplash.com/photo-1542435503-956c469947f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTMzNXwwfDF8c2VhcmNofDEzfHxhZHZlcnRpc2VtZW50fGVufDB8fHx8MTcwMTc2MjI0OHww&ixlib=rb-4.0.3&q=80&w=1080" alt="Ad" class="ad-image">
+                    <div class="ad-overlay">
+                        <div class="ad-info-text">Ad 2 of 3 • 0:10</div>
+                        <button class="skip-ad-button">Skip Ad</button>
+                    </div>
+                </div>
+                <div class="ad-details">
+                    <div class="ad-info">
+                        <span class="ad-label">Ad</span>
+                    </div>
+                    <h3 class="ad-title">Boost Your Productivity with ClickUp</h3>
+                    <p class="ad-description">My work is easy because I use ClickUp.</p>
+                </div>
+            </div>
+
+            <div class="video-card smaller-video-card">
+                <img src="https://images.unsplash.com/photo-1549684307-e438c7f39572?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTMzNXwwfDF8c2VhcmNofDh8fGdpdGFyJTIwcGxheWluZ3xlbnwwfHx8fDE3MDI2MTQ4Nzh8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Video Thumbnail" class="video-thumbnail">
+                <div class="video-info">
+                    <img src="https://i.pravatar.cc/30?img=2" alt="Channel Avatar" class="channel-avatar">
+                    <div class="video-details">
+                        <h3 class="video-title">Mastering Guitar Chords for Beginners</h3>
+                        <p class="channel-name">Music Theory Hub</p>
+                        <p class="video-stats">500K views • 1 month ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card ad-card smaller-video-card">
+                <div class="ad-image-container">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961dde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTMzNXwwfDF8c2VhcmNofDN8fGJlYWNofGVufDB8fHx8MTcwMjYxNTM3MXww&ixlib=rb-4.0.3&q=80&w=1080" alt="Video Thumbnail" class="video-thumbnail">
+                    <div class="ad-overlay">
+                        <div class="ad-info-text">Ad 3 of 3 • 0:15</div>
+                        <button class="skip-ad-button">Skip Ad</button>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <img src="https://i.pravatar.cc/30?img=10" alt="Channel Avatar" class="channel-avatar">
+                    <div class="video-details">
+                        <h3 class="video-title">Top 5 Hidden Beaches in Southeast Asia</h3>
+                        <p class="channel-name">Paradise Finder</p>
+                        <p class="video-stats">950K views • 2 weeks ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card smaller-video-card">
+                <img src="https://images.unsplash.com/photo-1490650961858-a55e105e4922?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTMzNXwwfDF8c2VhcmNofDR8fGZpdG5lc3N8ZW58MHx8fHwxNzAyNjE1NDExfDA&ixlib=rb-4.0.3&q=80&w=1080" alt="Video Thumbnail" class="video-thumbnail">
+                <div class="video-info">
+                    <img src="https://i.pravatar.cc/30?img=11" alt="Channel Avatar" class="channel-avatar">
+                    <div class="video-details">
+                        <h3 class="video-title">Full Body Workout Routine for Home</h3>
+                        <p class="channel-name">Fitness Daily</p>
+                        <p class="video-stats">2.1M views • 3 months ago</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="video-card smaller-video-card">
+                <img src="https://images.unsplash.com/photo-1469854523086-dd0200277863?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTMzNXwwfDF8c2VhcmNofDJ8fHRyYXZlbHxlbnwwfHx8fDE3MDI2MTQ4ODl8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Video Thumbnail" class="video-thumbnail">
+                <div class="video-info">
+                    <img src="https://i.pravatar.cc/30?img=3" alt="Channel Avatar" class="channel-avatar">
+                    <div class="video-details">
+                        <h3 class="video-title">Travel Vlog: Exploring the Italian Dolomites</h3>
+                        <p class="channel-name">Wanderlust Journeys</p>
+                        <p class="video-stats">2.5M views • 3 days ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card smaller-video-card">
+                <img src="https://images.unsplash.com/photo-1504384764586-bb4be8f53b5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTMzNXwwfDF8c2VhcmNofDZ8fGJ1c2luZXNzJTIwbWVldGluZ3xlbnwwfHx8fDE3MDI2MTUyNjJ8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Video Thumbnail" class="video-thumbnail">
+                <div class="video-info">
+                    <img src="https://i.pravatar.cc/30?img=8" alt="Channel Avatar" class="channel-avatar">
+                    <div class="video-details">
+                        <h3 class="video-title">Startup Secrets: How to Grow Your Business Fast</h3>
+                        <p class="channel-name">Entrepreneur Hub</p>
+                        <p class="video-stats">800K views • 1 week ago</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>

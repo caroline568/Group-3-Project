@@ -1,0 +1,361 @@
+/* Basic Reset and Global Styles */
+body, h1, h3, p, a, button, input {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f0f0f;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #202020;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.youtube-logo {
+    width: 90px;
+    height: 30px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header-middle {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 500px;
+    padding: 8px 15px;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #303030;
+    background-color: #121212;
+    color: #fff;
+    outline: none;
+}
+
+.search-button {
+    background-color: #303030;
+    border: 1px solid #303030;
+    border-radius: 0 20px 20px 0;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.material-icons {
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Main Content and Sidebar */
+.main-content {
+    display: flex;
+    padding-top: 60px; /* Offset for fixed header */
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #202020;
+    padding-top: 20px;
+    position: fixed;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar-item:hover {
+    background-color: #303030;
+}
+
+.sidebar-item.active {
+    background-color: #303030;
+    font-weight: bold;
+}
+
+.sidebar hr {
+    border: none;
+    height: 1px;
+    background-color: #303030;
+    margin: 10px 0;
+}
+
+/* Main Video Section */
+.main-video-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-left: 200px; /* Offset for fixed sidebar */
+}
+
+/* Video Grid */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style for the larger video card (laptop thumbnail) */
+.larger-video-card {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+}
+
+/* Style for the standard video card */
+.smaller-video-card {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+/* Comments section styling */
+.comments-section {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.comments-count {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.comment-input-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.user-avatar-small {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.comment-input {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #303030;
+    padding-bottom: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-bottom-color 0.2s ease;
+}
+
+.comment-input:focus {
+    border-bottom-color: #fff;
+}
+
+.comment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comment-item {
+    display: flex;
+    gap: 15px;
+}
+
+.comment-details {
+    flex-grow: 1;
+}
+
+.comment-user {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.comment-date {
+    font-weight: normal;
+    color: #aaa;
+    font-size: 12px;
+}
+
+.comment-text {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+/* General Video Card and Info Styles */
+.video-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.video-card:hover {
+    transform: scale(1.03);
+}
+
+.video-thumbnail,
+.ad-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-info {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.channel-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.video-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-title {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.4;
+    max-height: 2.8em;
+    overflow: hidden;
+}
+
+.channel-name, .video-stats {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Ad Specific Styling */
+.ad-card {
+    background-color: #282828;
+    position: relative;
+    border: 1px solid #444;
+}
+
+.ad-image-container {
+    position: relative;
+}
+
+.ad-image {
+    width: 100%;
+}
+
+.ad-details {
+    padding: 15px;
+    position: relative;
+}
+
+.ad-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ad-label {
+    background-color: #909090;
+    color: #121212;
+    padding: 2px 5px;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+/* Ad Overlay for the thumbnail */
+.ad-overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.ad-info-text {
+    font-size: 12px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.skip-ad-button {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.skip-ad-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
