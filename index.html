@@ -9,6 +9,7 @@
   <title>Document</title>
 </head>
 <body>
+  
   <header class="header">
     <a href="#">
       <img src="logo.png" alt="YouTube Logo" class="youtube-logo" />
@@ -34,6 +35,55 @@
       </a>
     </div>
   </header>
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <!-- Menu (hamburger) button -->
+    <button class="menu-button" aria-label="Toggle sidebar">
+      <svg class="menu-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+        <path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/>
+      </svg>
+    </button>
+
+    <a href="#" class="sidebar-item active">
+      <!-- Home Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+      </svg>
+      <span>Home</span>
+    </a>
+
+    <a href="#" class="sidebar-item">
+      <!-- Shorts Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+        <path d="M10.5 2l7.5 9-7.5 9V2z"/>
+      </svg>
+      <span>Shorts</span>
+    </a>
+
+    <a href="#" class="sidebar-item">
+      <!-- Subscriptions Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+        <path d="M4 6h16v2H4V6zm0 4h16v10H4V10zm2 2v6l5-3-5-3z"/>
+      </svg>
+      <span>Subscriptions</span>
+    </a>
+
+    <a href="#" class="sidebar-item">
+      <!-- Profile Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+        <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/>
+      </svg>
+      <span>Profile</span>
+    </a>
+
+    <a href="#" class="sidebar-item">
+      <!-- Downloads Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+        <path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.67v4h6V9h3.67L12 2z"/>
+      </svg>
+      <span>Downloads</span>
+    </a>
+  </nav>
   <div class="categories">
     <section class="category-section">
       <button class="category active">All</button>
