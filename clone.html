@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Clone - Home</title>
+  <link rel="stylesheet" href="index.css">
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="logo">
+      <span class="material-icons menu-btn" id="menu-btn">menu</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo">
+    </div>
+    <ul class="sidebar-links" id="sidebar-links">
+      <!-- Main -->
+      <li class="active" data-page="home"><span class="material-icons">home</span><span class="link-text">Home</span></li>
+      <li data-page="shorts"><span class="material-icons">play_circle_filled</span><span class="link-text">Shorts</span></li>
+      <li data-page="subscriptions"><span class="material-icons">subscriptions</span><span class="link-text">Subscriptions</span></li>
+
+      <hr>
+
+      <!-- You -->
+      <li data-page="history"><span class="material-icons">history</span><span class="link-text">History</span></li>
+      <li data-page="playlists"><span class="material-icons">playlist_play</span><span class="link-text">Playlists</span></li>
+      <li data-page="your-videos"><span class="material-icons">smart_display</span><span class="link-text">Your Videos</span></li>
+      <li data-page="watch-later"><span class="material-icons">watch_later</span><span class="link-text">Watch Later</span></li>
+      <li data-page="liked"><span class="material-icons">thumb_up</span><span class="link-text">Liked Videos</span></li>
+      <li data-page="downloads"><span class="material-icons">download</span><span class="link-text">Downloads</span></li>
+
+      <hr>
+
+      <!-- Subscriptions -->
+      <p class="section-title">Subscriptions</p>
+      <li><img class="channel-avatar" src="https://yt3.ggpht.com/ytc/AKedOLQ_fake1=s48-c-k-c0x00ffffff-no-rj" alt=""><span class="link-text">TechWorld</span></li>
+      <li><img class="channel-avatar" src="https://yt3.ggpht.com/ytc/AKedOLQ_fake2=s48-c-k-c0x00ffffff-no-rj" alt=""><span class="link-text">MusicMix</span></li>
+      <li><img class="channel-avatar" src="https://yt3.ggpht.com/ytc/AKedOLQ_fake3=s48-c-k-c0x00ffffff-no-rj" alt=""><span class="link-text">GamerZone</span></li>
+
+      <hr>
+
+      <!-- Explore -->
+      <p class="section-title">Explore</p>
+      <li data-page="music"><span class="material-icons">music_note</span><span class="link-text">Music</span></li>
+      <li data-page="gaming"><span class="material-icons">sports_esports</span><span class="link-text">Gaming</span></li>
+      <li data-page="sports"><span class="material-icons">sports_soccer</span><span class="link-text">Sports</span></li>
+      <li data-page="courses"><span class="material-icons">school</span><span class="link-text">Courses</span></li>
+      <li data-page="podcasts"><span class="material-icons">mic</span><span class="link-text">Podcasts</span></li>
+    </ul>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="topbar-left">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo" class="logo">
+      </div>
+      <div class="topbar-center">
+        <div class="search-box">
+          <input type="text" placeholder="Search">
+          <button class="material-icons">search</button>
+        </div>
+        <button class="material-icons mic">mic</button>
+      </div>
+      <div class="topbar-right">
+        <span class="material-icons">video_call</span>
+        <span class="material-icons">apps</span>
+        <span class="material-icons">notifications</span>
+        <img src="https://yt3.ggpht.com/yti/ANoDKi6nG4dpytEwOjJlfQvIixw6xmtS2_M7zEdQ=s88-c-k-c0x00ffffff-no-rj" 
+             alt="User Avatar" class="avatar">
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content" id="content">
+      <!-- Home content -->
+      <div class="video-section" id="home-page">
+        <!-- Left: Featured Video + Comments -->
+        <div class="featured-video">
+          <div class="video-card featured">
+            <img src="assets/images/Beautiful Girl with News Studio Background Collection, Girl Female Presenter Reporting, Green Screen.jpg" alt="Main Video Thumbnail">
+            <button class="skip-ad">Skip Ad</button>
+            <div class="video-info">
+              <h3>The Best Ways to Learn a New Skill in Tech</h3>
+              <p>Dev Journey • 1.2M views • 2 weeks ago</p>
+            </div>
+          </div>
+
+          <!-- Comments -->
+          <div class="comments">
+            <h4>1,234 Comments</h4>
+            <input type="text" placeholder="Add a public comment...">
+            <div class="comment">
+              <strong>Jane Doe</strong>
+              <p>This was really helpful, thanks for sharing!</p>
+            </div>
+            <div class="comment">
+              <strong>Mike Tech</strong>
+              <p>I learned more from this than from a full course 👏</p>
+            </div>
+            <div class="comment">
+              <strong>Susan K.</strong>
+              <p>Can you make a follow-up on advanced topics?</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Recommended -->
+        <div class="recommended">
+          <div class="video-card">
+            <img src="assets/images/Hire me YouTube Thumbnail Designer - MD_ MAHAMUDUL HASSAN.jpg" alt="Recommended 1">
+            <button class="skip-ad">Skip Ad</button>
+            <div class="video-info">
+              <h4>Boost Your Productivity with ClickUp</h4>
+              <p>Ad • ClickUp</p>
+            </div>
+          </div>
+          <div class="video-card">
+            <img src="assets/images/download (6).jpg" alt="Recommended 2">
+            <button class="skip-ad">Skip Ad</button>
+            <div class="video-info">
+              <h4>Learn JavaScript in 20 Minutes</h4>
+              <p>Code Mastery • 845K views</p>
+            </div>
+          </div>
+          <div class="video-card">
+            <img src="assets/images/download.jpg" alt="Recommended 3">
+            <button class="skip-ad">Skip Ad</button>
+            <div class="video-info">
+              <h4>Top 10 AI Tools You Need in 2025</h4>
+              <p>FutureTech • 2.1M views</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
