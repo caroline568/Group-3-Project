@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTube Clone</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        color: #fff;
+    }
+    header {
+        background-color: #ff0000;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header h1 {
+        margin: 0;
+    }
+    nav a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+    .container {
+        padding: 20px;
+    }
+    .page {
+        display: none;
+    }
+    .active {
+        display: block;
+    }
+    /* Channel Banner & Profile */
+    .channel-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    .channel-banner {
+        flex: 1;
+        height: 150px;
+        background-image: url('https://picsum.photos/id/1060/1000/150');
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+    }
+    .channel-profile {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid #ff0000;
+        background-image: url('https://picsum.photos/id/1005/100/100');
+        background-size: cover;
+        background-position: center;
+    }
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+    }
+    .video-card {
+        border: 1px solid #333;
+        padding: 5px;
+        background-color: #111;
+        border-radius: 5px;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .video-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px #ff0000;
+    }
+    .video-card img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 3px;
+    }
+    .video-info {
+        padding: 5px;
+    }
+    .video-info strong {
+        display: block;
+        font-size: 14px;
+        color: #fff;
+        margin-bottom: 3px;
+    }
+    .video-info p {
+        margin: 2px 0;
+        color: #aaa;
+        font-size: 12px;
+    }
+    /* Feedback styling */
+    .feedback-container input, 
+    .feedback-container textarea, 
+    .feedback-container select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        background-color: #222;
+        color: #fff;
+        border: 1px solid #555;
+        border-radius: 3px;
+    }
+    .feedback-container button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #ff0000;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+    select {
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>YouTube Clone</h1>
+    <nav>
+        <a href="#" onclick="showPage('yourPage')">Your Page</a>
+        <a href="#" onclick="showPage('channel')">Your Channel</a>
+        <a href="#" onclick="showPage('help')">Help</a>
+        <a href="#" onclick="showPage('feedback')">Feedback</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- Your Page -->
+    <div id="yourPage" class="page active">
+        <h2>Your Page</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <img src="https://picsum.photos/id/1011/160/90" alt="Video Thumbnail 1">
+                <div class="video-info">
+                    <strong>Exploring the Mountains</strong>
+                    <p>AdventureTime</p>
+                    <p>👍 1.2K &nbsp; 💬 45</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="https://picsum.photos/id/1025/160/90" alt="Video Thumbnail 2">
+                <div class="video-info">
+                    <strong>Cute Puppy Compilation</strong>
+                    <p>PetLovers</p>
+                    <p>👍 2.5K &nbsp; 💬 102</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="https://picsum.photos/id/1035/160/90" alt="Video Thumbnail 3">
+                <div class="video-info">
+                    <strong>Cooking Pasta Like a Pro</strong>
+                    <p>ChefMaster</p>
+                    <p>👍 900 &nbsp; 💬 30</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your Channel Page -->
+    <div id="channel" class="page">
+        <div class="channel-header">
+            <div class="channel-banner"></div>
+            <div class="channel-profile"></div>
+        </div>
+        <h2>Your Channel</h2>
+        <p>Subscribers: 215K</p>
+        <div class="video-grid">
+            <div class="video-card">
+                <img src="https://picsum.photos/id/1041/160/90" alt="Channel Video">
+                <div class="video-info">
+                    <strong>Travel Vlog 2025</strong>
+                    <p>Views: 1.2M</p>
+                    <p>👍 3.1K &nbsp; 💬 200</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="https://picsum.photos/id/1052/160/90" alt="Channel Video">
+                <div class="video-info">
+                    <strong>DIY Home Projects</strong>
+                    <p>Views: 800K</p>
+                    <p>👍 2K &nbsp; 💬 75</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="https://picsum.photos/id/1062/160/90" alt="Channel Video">
+                <div class="video-info">
+                    <strong>Gadget Reviews</strong>
+                    <p>Views: 500K</p>
+                    <p>👍 1.5K &nbsp; 💬 60</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Page -->
+    <div id="help" class="page">
+        <h2>Help</h2>
+        <ul>
+            <li>How to upload videos</li>
+            <li>How to manage your channel</li>
+            <li>Community guidelines</li>
+            <li>Report an issue</li>
+        </ul>
+    </div>
+
+    <!-- Feedback Page -->
+    <div id="feedback" class="page">
+        <h2>Feedback</h2>
+        <div class="feedback-container">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <select id="sampleFeedback" onchange="fillFeedback()">
+                <option value="">--Choose a sample feedback--</option>
+                <option value="I love this platform, it's very user-friendly.">I love this platform, it's very user-friendly.</option>
+                <option value="I found some bugs when uploading videos, please fix.">I found some bugs when uploading videos, please fix.</option>
+                <option value="The UI can be improved to make navigation easier.">The UI can be improved to make navigation easier.</option>
+                <option value="Great experience! Keep adding new features.">Great experience! Keep adding new features.</option>
+            </select>
+            <textarea id="feedbackText" rows="5" placeholder="Your Feedback"></textarea>
+            <button onclick="submitFeedback()">Submit Feedback</button>
+        </div>
+        <div id="feedbackResult"></div>
+    </div>
+
+</div>
+
+<script>
+    function showPage(pageId) {
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(page => page.classList.remove('active'));
+        document.getElementById(pageId).classList.add('active');
+    }
+
+    function submitFeedback() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const feedback = document.getElementById('feedbackText').value;
+
+        if(!name || !email || !feedback){
+            alert("Please fill all fields!");
+            return;
+        }
+
+        document.getElementById('feedbackResult').innerHTML = `
+            <h3>Thank you for your feedback, ${name}!</h3>
+            <p>We have received your message:</p>
+            <p>${feedback}</p>
+        `;
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('feedbackText').value = '';
+        document.getElementById('sampleFeedback').value = '';
+    }
+
+    document.getElementById('feedbackText').addEventListener('keypress', function(e){
+        if(e.key === 'Enter' && !e.shiftKey){
+            e.preventDefault();
+            submitFeedback();
+        }
+    });
+
+    function fillFeedback() {
+        const selected = document.getElementById('sampleFeedback').value;
+        document.getElementById('feedbackText').value = selected;
+    }
+</script>
+
+</body>
+</html>

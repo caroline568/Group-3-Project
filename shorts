@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorts</title>
+    <!-- Use Tailwind CSS for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --bg-color: #0f0f0f;
+            --text-color: #f1f1f1;
+            --secondary-text-color: #aaa;
+            --accent-color: #ff0000;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .desktop-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-color);
+        }
+
+        /* --- Left Navigation Sidebar --- */
+        .left-nav {
+            width: 250px;
+            min-width: 200px;
+            padding: 1rem;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .nav-item:hover {
+            background-color: #272727;
+        }
+        
+        .nav-item.active {
+            background-color: #272727;
+            font-weight: 500;
+        }
+
+        .nav-item i {
+            font-size: 1.25rem;
+        }
+        .nav-item span {
+            font-size: 0.9rem;
+        }
+
+        /* --- Main Content Area --- */
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* --- Top Header --- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1.5rem;
+            background-color: var(--bg-color);
+            border-bottom: 1px solid #272727;
+        }
+
+        .header .logo-group {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .header .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            gap: 0.25rem;
+        }
+
+        .header .logo i {
+            color: var(--accent-color);
+        }
+        
+        .search-container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            width: 600px;
+            background-color: #121212;
+            border: 1px solid #303030;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+        }
+
+        .search-bar input {
+            background: none;
+            border: none;
+            outline: none;
+            color: #fff;
+            flex-grow: 1;
+            font-size: 1rem;
+        }
+        
+        .search-bar i {
+            color: #aaa;
+            margin-left: 0.5rem;
+            cursor: pointer;
+        }
+
+        .voice-search {
+            background-color: #272727;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .header .user-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .user-actions i {
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+
+        .user-actions .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        /* --- Video and Sidebars --- */
+        .video-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            padding: 2rem;
+            gap: 2rem;
+        }
+
+        .video-shorts-container {
+            display: flex;
+            position: relative;
+            background-color: #000;
+            border-radius: 1rem;
+            overflow: hidden;
+            width: 380px;
+            height: 600px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://placehold.co/400x700/000000/FFFFFF?text=Youtube+Shorts");
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.7);
+        }
+        
+        .video-content-overlay {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+        
+        .video-controls-top {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 0.5rem;
+            padding-top: 0.5rem;
+        }
+
+        .video-controls-top i {
+            font-size: 1.25rem;
+            color: #fff;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .channel-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .channel-name {
+            font-weight: 500;
+        }
+        
+        .subscribe-btn {
+            background-color: #fff;
+            color: #000;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.25rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        
+        .video-title {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        
+        .video-music {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* --- Right Sidebar Actions --- */
+        .right-sidebar {
+            width: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+        }
+        
+        .right-sidebar-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            gap: 0.25rem;
+        }
+
+        .right-sidebar-item i {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .right-sidebar-item img {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+
+        .next-video {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .next-video-icon {
+            font-size: 3rem;
+            color: #fff;
+            background-color: #272727;
+            padding: 1rem;
+            border-radius: 50%;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop-container">
+        <!-- Left Navigation Sidebar -->
+        <div class="left-nav">
+            <div class="logo-group mb-4">
+                <i class="fa-solid fa-bars cursor-pointer"></i>
+                <div class="logo">
+                    <i class="fa-brands fa-youtube"></i>
+                    YouTube
+                </div>
+            </div>
+            <div class="nav-item active">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </div>
+            <div class="nav-item">
+                <i class="fa-solid fa-fire"></i>
+                <span>Shorts</span>
+            </div>
+            <div class="nav-item">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Subscriptions</span>
+            </div>
+            <hr class="border-t border-gray-700 my-4">
+            <div class="nav-item">
+                <i class="fa-solid fa-user"></i>
+                <span>You</span>
+            </div>
+            <div class="nav-item">
+                <i class="fa-solid fa-download"></i>
+                <span>Downloads</span>
+            </div>
+            <div class="nav-item">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>History</span>
+            </div>
+        </div>
+        
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Top Header -->
+            <div class="header">
+                <div class="logo-group">
+                    <div class="logo">
+                        <i class="fa-brands fa-youtube"></i>
+                        YouTube
+                    </div>
+                </div>
+                <div class="search-container">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="voice-search">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                </div>
+                <div class="user-actions">
+                    <button class="flex items-center gap-2 p-2 rounded-full hover:bg-[#272727] transition-colors">
+                        <i class="fa-solid fa-video"></i>
+                        <span class="text-sm font-medium">Create</span>
+                    </button>
+                    <i class="fa-solid fa-bell"></i>
+                    <div class="avatar"></div>
+                </div>
+            </div>
+            
+            <!-- Video Section -->
+            <div class="video-main">
+                <!-- Video Container -->
+                <div class="video-shorts-container">
+                    <div class="video-background" style="background-image: url(https://placehold.co/400x700/000000/FFFFFF?text=ART+OF+WAR);"></div>
+                    <div class="video-content-overlay">
+                        <div class="video-controls-top">
+                            <i class="fa-solid fa-volume-xmark"></i>
+                            <i class="fa-solid fa-gear"></i>
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                        <div class="video-info">
+                            <h2 class="font-bold text-xl">ART OF WAR</h2>
+                            <h2 class="font-bold text-2xl">MID-AIR, AND</h2>
+                            <div class="channel-info">
+                                <img src="https://placehold.co/40x40/FF7F50/FFFFFF?text=@" alt="Profile Picture" class="rounded-full">
+                                <span class="channel-name">@artofwarm</span>
+                                <span class="subscribe-btn">Subscribe</span>
+                            </div>
+                            <p class="video-title">How Soldiers Smoked Without</p>
+                            <div class="video-music">
+                                <i class="fa-solid fa-music"></i>
+                                <span>How the Flea Bomb Worked</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Sidebar Actions -->
+                <div class="right-sidebar">
+                    <div class="right-sidebar-item">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>550K</span>
+                    </div>
+                    <div class="right-sidebar-item">
+                        <i class="fa-solid fa-thumbs-down"></i>
+                        <span>Dislike</span>
+                    </div>
+                    <div class="right-sidebar-item">
+                        <i class="fa-solid fa-comment"></i>
+                        <span>2349</span>
+                    </div>
+                    <div class="right-sidebar-item">
+                        <i class="fa-solid fa-share"></i>
+                        <span>Share</span>
+                    </div>
+                    <div class="right-sidebar-item">
+                        <i class="fa-solid fa-bookmark"></i>
+                        <span>Save to bookmark</span>
+                    </div>
+                    <div class="next-video">
+                        <div class="next-video-icon">
+                            <i class="fa-solid fa-download"></i>
+                        </div>
+                        <span>Next video</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
