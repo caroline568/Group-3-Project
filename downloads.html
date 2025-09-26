@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Downloads - YouTube Clone</title>
+  <link rel="stylesheet" href="downloads.css">
+</head>
+<body>
+    <header class="header">
+        <!-- Menu (hamburger) button -->
+        <button class="menu-button" aria-label="Toggle sidebar">
+            <svg class="menu-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                <path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/>
+            </svg>
+        </button>
+        <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="90" height="20" viewBox="0 0 90 20" fill="none">
+            <g id="yt_logo_rgb_light" transform="translate(-10,-5)">
+                <path fill="#FF0000" d="M39.8,5H16.2C12.7,5,10,7.7,10,11.2v7.7c0,3.5,2.7,6.2,6.2,6.2h23.6c3.5,0,6.2-2.7,6.2-6.2v-7.7C46,7.7,43.3,5,39.8,5z"/>
+                <path fill="#fff" d="M24,18l8.6-4.8L24,8.4V18z"/>
+                <path d="M55.2,12.3h2.2v8.7h-2.2V12.3zM67.5,12.3h2.1v8.7h-2.1v-3.5h-3.3v3.5H62v-8.7h2.1v3.4h3.3V12.3zM72.3,12.3h2.1v8.7h-2.1V12.3zM81.2,12.3h2.1v7.1c0,0.6,0.1,1,0.3,1.3c0.2,0.3,0.5,0.4,0.9,0.4c0.4,0,0.7-0.1,0.9-0.4c0.2-0.3,0.3-0.7,0.3-1.3v-7.1h2.1v7.1c0,1.2-0.3,2.1-1,2.7c-0.7,0.7-1.6,1-2.7,1s-2-0.3-2.7-1c-0.7-0.6-1-1.5-1-2.7V12.3zM93.2,12.3h2.1v3.5h3.3v-3.5h2.1v8.7h-2.1v-3.5h-3.3v3.5h-2.1V12.3zM106.6,12.3h2.1v7.1c0,0.6,0.1,1,0.3,1.3c0.2,0.3,0.5,0.4,0.9,0.4s0.7-0.1,0.9-0.4c0.2-0.3,0.3-0.7,0.3-1.3v-7.1h2.1v7.1c0,1.2-0.3,2.1-1,2.7c-0.7,0.7-1.6,1-2.7,1s-2-0.3-2.7-1c-0.7-0.6-1-1.5-1-2.7V12.3z"/>
+            </g>
+            </svg>
+        </a>
+        <p class="text">YouTube</p>
+        <form class="search-bar">
+            <input class="search-input" type="search" placeholder="Search" aria-label="Search" />
+            <button type="submit" class="search-btn">
+                <img src="/images/magnify.svg" />
+            </button>
+        </form>
+        <div class="menu-icons">
+            <a href="#">
+                <img src="/images/video-plus.svg" alt="Upload Video" />
+            </a>
+            <a href="#">
+                <img src="/images/apps.svg" alt="Apps" />
+            </a>
+            <a href="#">
+                <img src="/images/bell.svg" alt="Notifications" />
+            </a>
+            <a href="#">
+                <img class="menu-channel-icon" src="http:///unsplash.it/36/36?gravity=center" alt="Your Channel" />
+            </a>
+        </div>
+    </header>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <a href="index.html" class="menu-item"><span>🏠</span> Home</a>
+      <a href="shorts.html" class="menu-item"><span>🎬</span> Shorts</a>
+      <a href="subscriptions.html" class="menu-item"><span>📺</span> Subscriptions</a>
+      <a href="profile.html" class="menu-item"><span>👤</span> Profile</a>
+      <a href="history.html" class="menu-item"><span>⏱️</span> History</a>
+      <a href="playlist.html" class="menu-item"><span>📂</span> Playlists</a>
+      <a href="your-videos.html" class="menu-item"><span>📹</span> Your videos</a>
+      <a href="watch-later.html" class="menu-item"><span>🕒</span> Watch later</a>
+      <a href="liked.html" class="menu-item"><span>👍</span> Liked videos</a>
+      <a href="downloads.html" class="menu-item active"><span>⬇️</span> Downloads</a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <div class="downloads-header">
+        <h1 class="page-title">⬇️ Downloads</h1>
+        <a href="#" class="settings-link">DOWNLOADS SETTINGS</a>
+      </div>
+
+      <!-- Downloads List -->
+      <div class="video-grid">
+        <div class="video-card">
+          <img src="https://www.techzine.eu/wp-content/uploads/2025/01/Schermafbeelding-2025-01-17-065854-768x500.png" alt="Surface Pro 8">
+          <div class="video-info">
+            <h3>Microsoft Surface Pro 8 first impressions: worth the...</h3>
+            <p>The Verge • 38K views • 2 hours ago</p>
+            <div class="center-icon">▶</div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <img src="https://assets.swappie.com/cdn-cgi/image/width=600,height=600,fit=contain,format=auto/swappie-iphone-13-pro-silver.png?v=79038978" alt="iPhone 13 Pro">
+          <div class="video-info">
+            <h3>iPhone 13 Pro review: attention to detail</h3>
+            <p>The Verge • 564K views • 1 day ago</p>
+            <div class="center-icon">▶</div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf5XVEDzbXZLW36EK7tQiIvihN5SZJW0SovQ&s" alt="GoPro Hero 10">
+          <div class="video-info">
+            <h3>GoPro Hero10 Review: It's fast.</h3>
+            <p>The Verge • 192K views • 6 days ago</p>
+            <div class="center-icon">▶</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Note -->
+      <p class="downloads-note">
+        Downloads remain available as long as your device has an active internet connection at least once every 30 days.
+      </p>
+    </main>
+  </div>
+</body>
+</html>
